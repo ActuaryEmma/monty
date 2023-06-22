@@ -43,7 +43,7 @@ void push(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add_two(stack_t **stack, unsigned int line_number);
-
+void nop(stack_t **stack, unsigned int line_number);
 FILE *open_file(char *fileName);
 int read_file(FILE *file);
 void close_file(FILE *file);
@@ -59,4 +59,5 @@ int _pop(stack_t **head, unsigned int line_number);
 int _swap(stack_t **head, unsigned int line_number);
 int _add_two(stack_t **head, unsigned int line_number);
 stack_t *create_node(int value);
+
 #endif
