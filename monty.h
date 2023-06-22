@@ -37,9 +37,12 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+void pint(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void add_two(stack_t **stack, unsigned int line_number);
 
 FILE *open_file(char *fileName);
 int read_file(FILE *file);
@@ -50,4 +53,9 @@ int caller(stack_t **head, char *opcode, char *operand, unsigned int line_number
 int isdigits(char *operand);
 int _pall(stack_t **head);
 void free_list(stack_t **head);
+int _pint(stack_t **head, unsigned int line_number);
+int _pop(stack_t **head, unsigned int line_number);
+int _swap(stack_t **head, unsigned int line_number);
+int _add_two(stack_t **head, unsigned int line_number);
+stack_t *create_node(int value);
 #endif

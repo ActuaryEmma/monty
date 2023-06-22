@@ -8,6 +8,10 @@ int parse_line(stack_t **head, char *line, unsigned int line_number)
 		instruction_t instructions[] = {
 				{"push", push},
 				{"pall", pall},
+				{"pint", pint},
+				{"pop", pop},
+				{"swap", swap},
+				{"add_two", add_two},
 				{NULL, NULL}
 		};
 		opcode = strtok(line, DELIM);
