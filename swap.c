@@ -31,6 +31,8 @@ int _swap(stack_t **head, unsigned int line_number)
 	node2 = (*head)->next;
 
 	node1->next = node2->next;
+	if (node1->next)
+		node1->next->prev = node1;
 	node2->prev = NULL;
 	node2->next = node1;
 	node1->prev = node2;
