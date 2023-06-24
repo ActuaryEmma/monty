@@ -30,7 +30,7 @@ int _push(stack_t **head, unsigned int line_number, char *operand)
 	}
 	else
 	{
-		if (operand == NULL && isdigits(operand) == 0 && isPositive(operand) == 0)
+		if (operand == NULL || isdigits(operand) == 0 || isPositive(operand) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit_code = EXIT_FAILURE;
