@@ -30,7 +30,7 @@ int _push(stack_t **head, unsigned int line_number, char *operand)
 	}
 	else
 	{
-		if (operand == NULL || isdigits(operand) == 0)
+		if (operand == NULL && isdigits(operand) == 0 && isPositive(operand) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit_code = EXIT_FAILURE;
@@ -60,6 +60,30 @@ int isdigits(char *operand)
 	while (operand[i] != '\0')
 	{
 		if (isdigit(operand[i]))
+		{
+			i++;
+			continue;
+		}
+		exit_code = 0;
+		break;
+	}
+
+	return (exit_code);
+}
+/**
+  * isPositive - check if data is positive
+  * @operand: pointer to the data
+  * Return: 1
+  */
+
+int isPositive(char *operand)
+{
+	int i = 0;
+	int exit_code = 1;
+
+	while (operand[i] != '\0')
+	{
+		if ((operand[i] < 0))
 		{
 			i++;
 			continue;

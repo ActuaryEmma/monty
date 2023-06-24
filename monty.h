@@ -59,5 +59,5 @@ int _pop(stack_t **head, unsigned int line_number);
 int _swap(stack_t **head, unsigned int line_number);
 int _add_two(stack_t **head, unsigned int line_number);
 stack_t *create_node(int value);
-
+int isPositive(char *operand);
 #endif
