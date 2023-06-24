@@ -18,6 +18,7 @@ void add_two(stack_t **stack, unsigned int line_number)
   */
 int _add_two(stack_t **head, unsigned int line_number)
 {
+	stack_t *temp = NULL;
 	int exit_code = EXIT_SUCCESS;
 	int element1 = 0, element2 = 0;
 
@@ -26,12 +27,13 @@ int _add_two(stack_t **head, unsigned int line_number)
 		fprintf(stderr, "L%d: can't add, stack too short", line_number);
 		return (EXIT_FAILURE);
 	}
-
+	temp = *head;
 	element1 = (*head)->n;
 	element2 = (*head)->next->n;
 	element2 = element1 + element2;
 	(*head)->next->n = element2;
 	(*head) = (*head)->next;
-	free((*head)->prev);
+	(*head)->prev = NULL;
+	free(temp);
 	return (exit_code);
 }
