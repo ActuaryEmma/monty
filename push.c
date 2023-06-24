@@ -59,7 +59,7 @@ int isdigits(char *operand)
 
 	while (operand[i] != '\0')
 	{
-		if (isdigit(operand[i]))
+		if (operand[i] == '-' || isdigit(operand[i]))
 		{
 			i++;
 			continue;
