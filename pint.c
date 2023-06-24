@@ -26,6 +26,9 @@ int _pint(stack_t **head, unsigned int line_number)
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit_code = EXIT_FAILURE;
 	}
-	printf("%d\n", (*head)->n);
+	else
+	{
+		printf("%d\n", (*head)->n);
+	}
 	return (exit_code);
 }
