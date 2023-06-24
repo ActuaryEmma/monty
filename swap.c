@@ -25,7 +25,7 @@ int _swap(stack_t **head, unsigned int line_number)
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
-		exit_code = EXIT_FAILURE;
+		return (EXIT_FAILURE);
 	}
 	node1 = *head;
 	node2 = (*head)->next;
