@@ -32,7 +32,7 @@ int caller(stack_t **head, char *opcode, char *operand,
 	{
 		exit_code = _swap(head, line_number);
 	}
-	else if (strcmp(opcode, "add_two") == 0)
+	else if (strcmp(opcode, "add") == 0)
 	{
 		exit_code = _add_two(head, line_number);
 	}
