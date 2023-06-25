@@ -34,8 +34,7 @@ int _div_two(stack_t **head, unsigned int line_number)
 		return (EXIT_SUCCESS);
 	}
 	temp = *head;
-	element2 = element2 / element1;
-	(*head)->next->n = element2;
+	(*head)->next->n = element2 / element1;
 	*head = (*head)->next;
 	(*head)->prev = NULL;
 	free(temp);
