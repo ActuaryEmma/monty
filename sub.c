@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * sub - function to delete two top numbers
+ * sub - function to subtract two top numbers
  * @stack: pointer to head of stack
  * @line_number: pointer to line of the file
  * Return: void
@@ -11,7 +11,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	(void) line_number;
 }
 /**
- * _sub - function to delete two top numbers
+ * _sub - function to subtract two top numbers
  * @head: pointer to head of stack
  * @line_number: pointer to line of the file
  * Return: Exit Success else Exit failure
