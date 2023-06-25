@@ -44,6 +44,10 @@ int caller(stack_t **head, char *opcode, char *operand,
 	{
 		exit_code = _div_two(head, line_number);
 	}
+	else if (strcmp(opcode, "mul") == 0)
+	{
+		exit_code = _mul(head, line_number);
+	}
 	else if (strcmp(opcode, "nop") == 0)
 	{
 		nop(head, line_number);

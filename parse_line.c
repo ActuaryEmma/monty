@@ -21,6 +21,7 @@ int parse_line(stack_t **head, char *line, unsigned int line_number)
 		{"add", add_two},
 		{"sub", sub},
 		{"div", div_two},
+		{"mul", mul},
 		{"nop", nop},
 		{NULL, NULL}
 	};

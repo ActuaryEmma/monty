@@ -46,6 +46,7 @@ void add_two(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void sub(stack_t **sub, unsigned int line_number);
 void div_two(stack_t **stack, unsigned int line_number);
+void mul(stack_t **stack, unsigned int line_number);
 FILE *open_file(char *fileName);
 int read_file(FILE *file);
 void close_file(FILE *file);
@@ -64,4 +65,5 @@ stack_t *create_node(int value);
 int isPositive(char *operand);
 int _sub(stack_t **head, unsigned int line_number);
 int _div_two(stack_t **head, unsigned int line_number);
+int _mul(stack_t **head, unsigned int line_number);
 #endif
